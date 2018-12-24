@@ -1,0 +1,13 @@
+import numpy
+import math
+target = [1.5, 2.1, 3.3, -4.7, -2.3, 0.75]
+prediction = [0.5, 1.5, 2.1, -2.2, 0.1, -0.5]
+error=[]
+mse=[]
+for i in range(len(target)):
+    error.append(target[i] - prediction[i])
+for val in error:
+    mse.append(val*val)
+MSE=sum(mse)/len(mse)
+
+print("MSE:",MSE)
